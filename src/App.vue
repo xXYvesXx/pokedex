@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <div v-for="(poke,index) in pokemons" :key="index">
+    <div class="column is-half is-offseet-one-quarter">
+       <div v-for="(poke,index) in pokemons" :key="index">
       <Pokemon :name="poke.name" :url="poke.url" :num="index+1" />
+      <br>
     </div>
+    </div>
+   
   </div>
 </template>
 
@@ -27,7 +31,14 @@ export default {
 }
 </script>
 
+
 <style scoped>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
   #app{
     display: flex;
     flex-direction: column;
