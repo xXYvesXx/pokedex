@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>{{ num }}{{name | upper }} </h1>
+        <h1>{{ num }} - {{name | upper }} </h1>
         <small>{{url}}</small>
     </div>
 </template>

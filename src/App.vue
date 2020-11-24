@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-for="(poke,index) in pokemons" :key="index">
-      <Pokemon :name="poke.name" url="poke.url" :num="index+1" />
+      <Pokemon :name="poke.name" :url="poke.url" :num="index+1" />
     </div>
   </div>
 </template>
@@ -27,6 +27,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  #app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
