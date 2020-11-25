@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <div class="column is-half is-offseet-one-quarter">
+      <h4 class="is-size-3">Pokedex</h4>
+      <input type="text" placeholder="buscar pokemon pelo nome">
        <div v-for="(poke,index) in pokemons" :key="index">
-      <Pokemon :name="poke.name" :url="poke.url" :num="index+1" />
+       <Pokemon :name="poke.name" :url="poke.url" :num="index+1" />
       <br>
     </div>
     </div>
@@ -17,7 +19,8 @@ export default {
   name: 'App',
   data(){
     return{
-      pokemons: []
+      pokemons: [],
+      busca: ''
     }
   },
   created: function(){
